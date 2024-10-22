@@ -729,7 +729,13 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
     UNet: 1
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -749,11 +755,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: fab9cc08-c40d-4996-be0d-8d284045795b
+  cloudProjectId: 532f2180-592e-4568-8ca2-75cb41c10d85
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: NexusShooter
-  organizationId: ivan_seagull
+  organizationId: arm1nn
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
