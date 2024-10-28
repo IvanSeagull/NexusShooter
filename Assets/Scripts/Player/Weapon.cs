@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-
-
     public Camera playerCamera;
     public bool isShooting;
     public bool readyToShoot;
@@ -22,18 +20,21 @@ public class Weapon : MonoBehaviour
 
     public ShootingMode shootingMode;
 
-
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
 
     public float bulletVelocity = 30f;
     public float bulletLifeTime = 3f;
 
+    SoundController soundController;
 
-    void Awake(){
+    void Awake()
+    {
         readyToShoot = true;
         burstBulletsLeft = bulletPerBurst;
+        soundController = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundController>();
     }
+
     void Update()
     {
         if(shootingMode == ShootingMode.Auto){
@@ -45,9 +46,7 @@ public class Weapon : MonoBehaviour
         if(readyToShoot && isShooting){
             burstBulletsLeft = bulletPerBurst;
             FireWeapon();
-
         }
-        
     }
 
     public Vector3 CalculateDirectionAndSpread(){
@@ -72,6 +71,7 @@ public class Weapon : MonoBehaviour
     }
 
     private void FireWeapon(){
+        soundController.Play(soundController.shoot);
         readyToShoot = false;
 
         Vector3 shootDirection = CalculateDirectionAndSpread().normalized;
