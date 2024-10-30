@@ -2214,12 +2214,13 @@ MonoBehaviour:
   shootingDelay: 0.1
   bulletPerBurst: 3
   burstBulletsLeft: 0
-  spread: 1
-  shootingMode: 1
+  spread: 0
+  shootingMode: 0
   bulletPrefab: {fileID: 5673502454379642354, guid: 26a35b0ce1c25498c923b7a0caf89435, type: 3}
   bulletSpawn: {fileID: 221759766}
-  bulletVelocity: 60
+  bulletVelocity: 300
   bulletLifeTime: 3
+  damage: 30
 --- !u!1 &494606413
 GameObject:
   m_ObjectHideFlags: 0
