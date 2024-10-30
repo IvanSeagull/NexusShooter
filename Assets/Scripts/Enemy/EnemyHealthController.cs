@@ -12,14 +12,16 @@ public class EnemyHealthController : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-
     // Method to take damage
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         currentHealth = Mathf.Max(currentHealth, 0);
 
-
+        if (currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Method to heal
