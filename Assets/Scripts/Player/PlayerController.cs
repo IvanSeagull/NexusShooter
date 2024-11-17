@@ -7,7 +7,6 @@ public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
     private HealthController healthController;
-    public SoundController soundController;
     public Camera playerCamera;
 
     [Header("Movement")]
@@ -39,11 +38,6 @@ public class PlayerController : MonoBehaviour
     public bool isCrouched = false;
     public bool wishJump = false;
     public bool inventoryOpen = false;
-
-    void Awake()
-    {
-        soundController = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundController>();
-    }
 
     void Start()
     {
@@ -112,7 +106,6 @@ public class PlayerController : MonoBehaviour
 
         if (wishJump)
         {
-            soundController.Play(soundController.jump);
             characterVelocity.y = jumpForce;
             wishJump = false;
         }
